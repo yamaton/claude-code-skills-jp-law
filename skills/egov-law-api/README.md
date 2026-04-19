@@ -6,6 +6,8 @@
 
 **出典**: `SKILL.md` の記述は e-Gov 法令 API v2 の公式仕様（OpenAPI / Swagger UI: <https://laws.e-gov.go.jp/api/2/swagger-ui>）に準拠しています。
 
+![demo: 労働基準法第32条（2018年4月時点）を Claude Code から取得](./demo.gif)
+
 ---
 
 ## 1. スキル定義ファイル (`SKILL.md`) とは
