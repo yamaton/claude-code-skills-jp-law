@@ -1,4 +1,4 @@
-# egov-law-api スキル — 解説（日本語）
+# e-Gov 法令API v2 対応 Claude スキル — 解説
 
 このディレクトリにある `SKILL.md` は、 **Claude Code / Claude Agent SDK に読み込ませる「スキル定義ファイル」** です。AI エージェント（Anthropic の Claude 等）が e-Gov 法令 API v2 を呼び出すときの挙動指針として機能します。
 
