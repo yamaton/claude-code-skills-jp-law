@@ -65,6 +65,7 @@ Pattern: element names joined by `-`, numbered elements use `_N`, array indices 
 
 - **Consumed amending laws return 404.** Laws like `公職選挙法の一部を改正する法律` are unavailable after their provisions merge into the amended law. NDL 日本法令索引 API is one alternative for name/metadata lookup.
 - **`asof` is enforcement-date based**, not promulgation-date. The API returns the revision that was in force on that date.
+- **`asof` must be 2017-04-01 or later.** Earlier dates return HTTP 400 with code `400044`. The revision archive does not cover pre-2017 states.
 - **`/keyword` default `sentence_text_size` is 100 chars.** Increase it (e.g. `sentence_text_size=500`) to see more context around matches.
 - **Large laws may timeout.** Laws like 地方税法 (1,376 articles) can cause server-side timeouts. Use `elm` for partial extraction.
 - **`Misc` law_type (告示/訓令/通達) is not served by v2 API.** `law_type=Misc` queries return 0 results.
@@ -77,6 +78,7 @@ Pattern: element names joined by `-`, numbered elements use `_N`, array indices 
 |------|------|---------|--------|
 | 400 | `400001` | Parameter format error | Check parameter types/values |
 | 400 | `400004` | Invalid date format | Use YYYY-MM-DD |
+| 400 | `400044` | `asof` before 2017-04-01 | Use `asof` >= 2017-04-01 |
 | 404 | — | Law not found or consumed | Try `law_id` instead of `law_num`; law may be a consumed amending law |
 | 404 | `404003` | No attachment file | Verify `src` path from law XML `<Fig>` element |
 | 500 | `500001` | Server error | Retry after delay; use `elm` for large laws |
