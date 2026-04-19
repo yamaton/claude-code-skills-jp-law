@@ -85,4 +85,4 @@ Pattern: element names joined by `-`, numbered elements use `_N`, array indices 
 
 ## Full reference
 
-Official portal: https://laws.e-gov.go.jp/ — consult the official API specification for response schemas, full parameter enums, and category codes.
+Based on the official OpenAPI specification at <https://laws.e-gov.go.jp/api/2/swagger-ui>. Consult it for response schemas, full parameter enums, and category codes.
